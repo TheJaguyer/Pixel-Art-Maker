@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Art Maker</title>
+  </head>
+
+  <body>
+    <header id="header">Pixel Art Maker</header>
+    <div id="board">
+      <div id="canvas" class="item">
+        <div id="squares" class="item"></div>
+      </div>
+      <div id="tools" class="item">
+        <div id="colors" class="item tool">
+          <div class="choice red"></div>
+          <div class="choice green"></div>
+          <div class="choice blue"></div>
+          <div class="choice yellow"></div>
+          <div class="choice black"></div>
+          <div class="choice white"></div>
+          <div id="indicator" class="choice last"></div>
+        </div>
+        <div id="options" class="item tool">
+          Grid Size
+          <input type="number" id="height" name="height" min="1" max="100" />
+          (1 to 150)
+          <button type="button" id="set">Set</button>
+          <input type="color" id="color-picker" />
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      Click the palette to select a new color! Shift click to select a color on the board.
+      <br />
+      Shift click the palette to set a new color. The last element is your current color selection.
+      <button input="button" id="save">Save</button>
+      <button input="button" id="load">Load</button>
+    </footer>
+  </body>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="pixel.js" defer></script>
+</html>
