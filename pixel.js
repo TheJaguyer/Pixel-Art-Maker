@@ -23,10 +23,6 @@ const parser = new DOMParser();
 
 function makeSquare() {
   let square = document.createElement('square');
-  square.style.borderStyle = 'solid';
-  square.style.borderColor = 'rgb(200, 200, 200)';
-  square.style.borderWidth = '1px';
-  square.style.margin = 0;
   square.classList.add('square');
   square.addEventListener('mousedown', clickColor);
   square.addEventListener('mouseover', dragColor);
@@ -108,7 +104,7 @@ function pullFromLocal() {
   canvas.addEventListener('mouseover', dragColor);
 }
 
-// Actually Running Code
+// Actual Running Code
 
 stackRows();
 
