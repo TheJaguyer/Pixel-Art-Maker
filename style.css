@@ -141,7 +141,7 @@ body {
 .choice {
   display: flex;
   min-width: 10px;
-  max-width: 100px;
+  max-width: 150px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   border: 2px solid rgb(56, 62, 66);
@@ -155,7 +155,7 @@ body {
 .last {
   display: flex;
   min-width: 10px;
-  max-width: 100px;
+  max-width: 150px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   border: 2px solid rgb(56, 62, 66);
