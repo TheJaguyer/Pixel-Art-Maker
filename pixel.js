@@ -19,15 +19,6 @@ var circle;
 var saveButton = document.querySelector('#save');
 var loadButton = document.querySelector('#load');
 var title = '';
-const parser = new DOMParser();
-
-function makeSquare() {
-  let square = document.createElement('square');
-  square.classList.add('square');
-  square.addEventListener('mousedown', clickColor);
-  square.addEventListener('mouseover', dragColor);
-  return square;
-}
 
 function makeRow() {
   let row = document.createElement('row');
@@ -36,6 +27,14 @@ function makeRow() {
     row.appendChild(makeSquare());
   }
   return row;
+}
+
+function makeSquare() {
+  let square = document.createElement('square');
+  square.classList.add('square');
+  square.addEventListener('mousedown', clickColor);
+  square.addEventListener('mouseenter', dragColor);
+  return square;
 }
 
 function stackRows() {
