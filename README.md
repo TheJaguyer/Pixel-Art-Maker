@@ -60,3 +60,4 @@ A good domain name for this project is `USERNAME-pixel-art-maker.surge.sh` where
 - [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
 - [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 - [appendChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+# Pixel-Art-Maker
