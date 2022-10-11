@@ -6,6 +6,7 @@ var set = document.querySelector('#set');
 var palette = document.querySelector('#colors');
 var height = 25;
 var mycolor = 'white';
+var myborder = 'white';
 var indicator = document.querySelector('#indicator');
 var red = document.querySelector('#red');
 var blue = document.querySelector('.blue');
@@ -49,19 +50,28 @@ function stackRows() {
 }
 
 function clickColor(e) {
-  if (e.shiftKey) {
+  if (e.ctrlKey) {
+    e.target.style.backgroundColor = 'aliceblue';
+    e.target.style.borderColor = 'rgb(200, 200, 200)';
+  } else if (e.shiftKey) {
     indicator.style.backgroundColor = e.target.style.backgroundColor;
     mycolor = e.target.style.backgroundColor;
+    myborder = e.target.style.borderColor;
   } else {
     e.target.style.backgroundColor = mycolor;
-    e.target.style.borderColor = mycolor;
+    e.target.style.borderColor = myborder;
   }
 }
 
 function dragColor(e) {
   if (e.buttons === 1) {
-    e.target.style.backgroundColor = mycolor;
-    e.target.style.borderColor = mycolor;
+    if (e.ctrlKey) {
+      e.target.style.backgroundColor = 'aliceblue';
+      e.target.style.borderColor = 'rgb(200, 200, 200)';
+    } else {
+      e.target.style.backgroundColor = mycolor;
+      e.target.style.borderColor = myborder;
+    }
   }
 }
 
@@ -127,6 +137,7 @@ for (let i = 0; i < palette.children.length - 1; i++) {
     }
     console.log(getComputedStyle(circle).backgroundColor);
     mycolor = getComputedStyle(circle).backgroundColor;
+    myborder = getComputedStyle(circle).borderColor;
     newColor();
   });
 }
