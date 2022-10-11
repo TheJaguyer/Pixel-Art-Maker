@@ -48,6 +48,13 @@ function clickColor(e) {
     indicator.style.backgroundColor = e.target.style.backgroundColor;
     mycolor = e.target.style.backgroundColor;
     myborder = e.target.style.borderColor;
+  } else if (e.altKey) {
+    for (let i = 0; i < height; i++) {
+      for (let j = 0; j < height; j++) {
+        canvas.children[i].children[j].style.backgroundColor = mycolor;
+        canvas.children[i].children[j].style.borderColor = myborder;
+      }
+    }
   } else {
     e.target.style.backgroundColor = mycolor;
     e.target.style.borderColor = myborder;
