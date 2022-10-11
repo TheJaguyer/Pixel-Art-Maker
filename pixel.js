@@ -13,6 +13,7 @@ var circle;
 var saveButton = document.querySelector('#save');
 var loadButton = document.querySelector('#load');
 var title = '';
+const screenshotTarget = canvas;
 
 function makeSquare() {
   let square = document.createElement('square');
