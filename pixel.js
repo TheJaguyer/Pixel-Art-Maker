@@ -42,6 +42,14 @@ function stackRows() {
 }
 
 function clickColor(e) {
+  if (e.ctrlKey && e.altKey) {
+    for (let i = 0; i < height; i++) {
+      for (let j = 0; j < height; j++) {
+        canvas.children[i].children[j].style.backgroundColor = 'aliceblue';
+        canvas.children[i].children[j].style.borderColor = 'rgb(200, 200, 200)';
+      }
+    }
+  }
   if (e.ctrlKey) {
     e.target.style.backgroundColor = 'aliceblue';
     e.target.style.borderColor = 'rgb(200, 200, 200)';
